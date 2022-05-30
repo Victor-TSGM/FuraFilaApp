@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="960.0" prefWidth="442.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.loginController">
+   <children>
+      <Pane prefHeight="960.0" prefWidth="442.0">
+         <children>
+            <ImageView fitHeight="1007.0" fitWidth="449.0" layoutX="-6.0" layoutY="-48.0" pickOnBounds="true">
+               <image>
+                  <Image url="@assets/background.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="userTxt" layoutX="106.0" layoutY="403.0" prefHeight="41.0" prefWidth="226.0" promptText="Usuário" />
+            <TextField fx:id="passwordTxt" layoutX="106.0" layoutY="465.0" prefHeight="41.0" prefWidth="226.0" promptText="Senha" />
+            <ImageView fitHeight="211.0" fitWidth="215.0" layoutX="113.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="254.0" fitWidth="310.0" layoutX="74.0" layoutY="232.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@assets/logo-texto.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnLogin" fitHeight="41.0" fitWidth="158.0" layoutX="159.0" layoutY="546.0" onMouseClicked="#autenticarLogin" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/login.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="71.0" fitWidth="21.0" layoutX="407.0" layoutY="59.0" onMouseClicked="#closeApp" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/close.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hideBtn" fitHeight="41.0" fitWidth="32.0" layoutX="360.0" layoutY="54.0" onMouseClicked="#hideApp" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/hide.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="btnRegister" contentDisplay="CENTER" layoutX="189.0" layoutY="603.0" onMouseClicked="#openRegister" prefHeight="21.0" prefWidth="79.0" text="Registrar" textFill="#f7f7f7" underline="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</VBox>
